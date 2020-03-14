@@ -20,8 +20,14 @@ export default class SafeComponent extends Component {
   }
 }
 
-const safe = (component) => {
-  ErrorUtils.setGlobalHandler(handleError);
+const safe = (component, customHandler) => {
+  if (!component) {
+    throw new Error("first argument to safe function must be a component");
+  }
+  if (customHandler && typeof customHandler !== "function") {
+    throw new Error("second argument to safe function must be a function")
+  }
+  ErrorUtils.setGlobalHandler(customHandler || handleError);
 
   return component;
 }

@@ -8,6 +8,10 @@ import {
 import SafeComponent, { safe } from "rn-global-error-handler";
 import Home from './Home';
 
+function customErrHandler() {
+  alert("This is a custom error handler");
+}
+
 const App = () => {
   return (
     <>
@@ -37,4 +41,4 @@ const App = () => {
 //   }
 // };
 
-export default safe(App);
+export default safe(App, customErrHandler);
