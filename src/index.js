@@ -6,6 +6,8 @@ const handleError = (err, fatal) => {
   alert("Something went wrong. Please try again later");
 }
 
+const isDevEnv = () => __DEV__;
+
 export default class SafeComponent extends Component {
   constructor(props) {
     super(props);
@@ -20,8 +22,16 @@ export default class SafeComponent extends Component {
   }
 }
 
-const safe = (component) => {
-  ErrorUtils.setGlobalHandler(handleError);
+const safe = (component, enableInDev, customHandler) => {
+  if (!component) {
+    throw new Error("first argument to safe function must be a component");
+  }
+  if (customHandler && typeof customHandler !== "function") {
+    throw new Error("second argument to safe function must be a function")
+  }
+  if (!isDevEnv)
+    ErrorUtils.setGlobalHandler(customHandler || handleError);
+  else if (enableInDev) ErrorUtils.setGlobalHandler(customHandler || handleError);
 
   return component;
 }

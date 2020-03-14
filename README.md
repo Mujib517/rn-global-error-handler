@@ -63,6 +63,30 @@ const App = () => {
 export default safe(App);
 ```
 
+#### Enable in dev environment
+```
+const App = () => {
+  return <Text>Cool App!</Text>
+}
+
+export default safe(App,true);
+```
+
+#### with custom error handler
+```
+
+function customErrHandler() {
+  // log error message
+  alert("This is a custom error handler");
+}
+
+const App = () => {
+  return <Text>Cool App!</Text>
+}
+
+export default safe(App,true,customErrHandler);
+```
+
 ## License
 
 MIT © [mujib517](https://github.com/mujib517)

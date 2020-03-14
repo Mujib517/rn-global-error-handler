@@ -12,7 +12,7 @@
   "dependencies": {
     "react": "16.9.0",
     "react-native": "0.61.5",
-    "rn-global-error-handler": "file:../rn-global-error-handler-1.0.4.tgz"
+    "rn-global-error-handler": "file:../rn-global-error-handler-1.1.0.tgz"
   },
   "devDependencies": {
     "@babel/core": "7.8.4",
