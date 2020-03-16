@@ -4,6 +4,9 @@
 
 [![NPM](https://img.shields.io/npm/v/rn-global-error-handler.svg)](https://www.npmjs.com/package/rn-global-error-handler) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
+[![Build Status](https://travis-ci.org/Mujib517/rn-global-error-handler.svg?branch=master)](https://travis-ci.org/Mujib517/rn-global-error-handler)
+
+
 ## Install
 
 ```bash
