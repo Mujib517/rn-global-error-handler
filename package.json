@@ -3,6 +3,11 @@
   "private": false,
   "version": "1.1.0",
   "description": "React Native error handler for unhandled exception",
+  "keywords": [
+    "global error handler",
+    "react native error handler",
+    "global react native error handler"
+  ],
   "author": "mujib517",
   "license": "MIT",
   "repository": "",
