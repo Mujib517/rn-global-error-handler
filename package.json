@@ -1,7 +1,7 @@
 {
   "name": "rn-global-error-handler",
   "private": false,
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "React Native error handler for unhandled exception",
   "keywords": [
     "global error handler",
@@ -10,7 +10,7 @@
   ],
   "author": "mujib517",
   "license": "MIT",
-  "repository": "",
+  "repository": "https://github.com/Mujib517/rn-global-error-handler",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
